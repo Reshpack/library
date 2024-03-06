@@ -1,42 +1,43 @@
-* {
+
+  * {
     padding: 0;
     margin: 0;
-    font-family: "Kaushan Script", cursive;
     box-sizing: border-box;
-}
+    font-family: 'Poppins', sans-serif;
+  }
 
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-    background: #D8BAA5;
-    color: #333;
-    padding-top: 4%;
-    padding-left: 10%;
-}
-
-.container h1 {
+  /*  header  */
+  header {
     display: flex;
     align-items: center;
-    font-size: 40px;
-    font-weight: 600;
-}
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+    width: 100vw;
+    height: min-content;
+    background: #f8fafc;
+  }
 
-.container h1 img {
+  header img {
     width: 50px;
-    margin-right: 20px;
-}
+  }
 
-.container button {
+  .header-title {
     display: flex;
+    justify-content: center;
     align-items: center;
-    background: #333;
-    color: #fff;
-    font-size: 16px;
-    outline: 0;
-    border: 0;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 30px 0px 20px;
-    cursor: pointer;
-}
+  }
+
+  .header-title h1 {
+    color: #333;
+    padding-left: 5px;
+  }
+
+    .header-btn i {
+        font-size: 2rem;
+    }
+
+    .header-btn button {
+        outline: 0;
+        border: 0;
+        background: transparent;
+    }
