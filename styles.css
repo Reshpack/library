@@ -1,87 +1,147 @@
-
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  /* colour #f8fafc */
-  /*  header  */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1.5rem;
-    width: 100vw;
-    height: min-content;
-    background: #fff;
-  }
-
-  header img {
-    width: 50px;
-  }
-
-  .header-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .header-title h1 {
-    color: #333;
-    padding-left: 5px;
-  }
-
-
-.add-btn {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-.add-btn:hover {
-  background-color: #0056b3;
-}
-
-.add-btn:active {
-  transform: translateY(2px);
-}
-
 body {
-  background: #f8fafc;
+  font-family: "EB Garamond", sans-serif;
+  background-color: #E3B694;
+}
+h1 {
+  font-weight: 600;
+  color: #D78442;
 }
 
-.popup {
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+.banner {
+  background-color: #F6D5B6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#library-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+
+.book-container {
+  background-color: #CBD7EA;
+  color: #50586c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.popup-content {
-  height: 400px;
-  width: 350px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.popup-content .book-form {
-  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 15px;
 }
 
-.book-form label {
-  padding: 10px 0;
+#add {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #8C8482;
+  box-shadow: 0 5px #726D6A;
+}
+
+#add:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#close {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+}
+
+.remove-book {
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.remove-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Style for the dialog */
+dialog {
+  position: fixed;
+  top: 50%; /* Position the dialog 50% down from the top */
+  left: 50%; /* Position the dialog 50% from the left */
+  transform: translate(-50%, -50%); /* Center the dialog using translate */
+  z-index: 1000; /* Ensure the dialog is on top of other elements */
+  padding: 5px;
+  border-radius: 16px;
+  width: 250px;
+  height: 300px;
+  background-color: #dce2f0;
+  color: #50586c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#confirm-add {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #50586c;
+  color: #dce2f0;
+  border: none;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+#confirm-add:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.read-book {
+  background-color: #33c848;
+  border: 1px solid #28ab34;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.read-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.notread-book {
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.notread-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

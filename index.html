@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
     <title>Library</title>
-</head>
-<body>
-<!-- https://casssb.github.io/library/ -->
+  </head>
+  <body>
+    <div class="banner">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: #D78442;">
+            <path d="M7 3h2v18H7zM4 3h2v18H4zm6 0h2v18h-2zm9.062 17.792-6.223-16.89 1.877-.692 6.223 16.89z"></path></svg>
 
-<!-- https://www.youtube.com/watch?v=9YGgC1WPpf4&ab_channel=DorsCodingSchool -->
-    <!-- header -->
-    <header>
-        <div class="header-title">
-            <img src="images/alt-logo.png" alt="">
-            <h1>My library</h1>
-        </div>
-        <div class="header-btn">
-            <button class="add-btn">Add Book</button>
-        </div>
-    </header>
-    <!-- Main -->
-    <main>
-        
-    </main>
-    <div class="booklist-wrapper">
+        <h1>My Library</h1>
+      </div>
 
-    </div>
-    <div class="popup">
-        <div class="popup-content">
-            <form action="#" class="book-form" id="book-form">
-              <label for="title">Title:</label>
-              <input type="text" id="title">
-              <label for="author">Author:</label>
-              <input type="text" id="author">
-              <label for="author">Pages:</label>
-              <input type="text" id="pages">
-              <label for="summary">Summary:</label>
-              <textarea name="book-form-summary" id="book-form-summary"rows="5"></textarea>
-              <label for="author">Read <input type="checkbox" id="read"></label>
-              <input type="submit" value="Add Book">
-            </form>
-        </div>
+      <button id="add">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="30"
+          height="30"
+          fill="#dce2f0"
+        >
+          <title>book-plus</title>
+          <path
+            d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z"
+          />
+        </svg>
+      </button>
     </div>
 
+    <dialog>
+      <form id="book-form" method="dialog">
+        <button id="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="13"
+            height="13"
+            fill="#80050D"
+          >
+            <title>close</title>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg></button
+        ><br /><br />
+        <label for="book-title">Title &nbsp; &nbsp;</label>
+        <input
+          type="text"
+          id="book-title"
+          name="book-title"
+          required
+        /><br /><br />
 
-    <script src="script.js"></script>
-</body>
+        <label for="author-name">Author</label>
+        <input
+          type="text"
+          id="author-name"
+          name="author-name"
+          required
+        /><br /><br />
+
+        <label for="page-number">Pages &nbsp;</label>
+        <input
+          type="number"
+          id="page-number"
+          name="page-number"
+          required
+        /><br /><br />
+
+        <p>Status</p>
+        <input
+          type="radio"
+          id="read-status"
+          name="read-status"
+          value="Read"
+          required
+        />
+        <label for="read-status" value="read">Read</label><br />
+        <input
+          type="radio"
+          id="not-read"
+          name="read-status"
+          value="Not read"
+          required
+        />
+        <label for="read-status" value="not-read">Not read</label><br /><br />
+
+        <input type="submit" value="Add book" id="confirm-add" />
+      </form>
+    </dialog>
+
+    <div id="library-body"></div>
+  </body>
 </html>
-
