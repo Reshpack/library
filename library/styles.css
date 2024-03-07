@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "EB Garamond", sans-serif;
+  background-color: #E3B694;
+}
+h1 {
+  font-weight: 600;
+  color: #726D6A;
+}
+
+.banner {
+  background-color: #F6D5B6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#library-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+
+.book-container {
+  background-color: #CBD7EA;
+  color: #50586c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 15px;
+  gap: 15px;
+}
+
+#add {
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #8C8482;
+  box-shadow: 0 5px #726D6A;
+}
+
+#add:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#close {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+}
+
+.remove-book {
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.remove-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Style for the dialog */
+dialog {
+  position: fixed;
+  top: 50%; /* Position the dialog 50% down from the top */
+  left: 50%; /* Position the dialog 50% from the left */
+  transform: translate(-50%, -50%); /* Center the dialog using translate */
+  z-index: 1000; /* Ensure the dialog is on top of other elements */
+  padding: 5px;
+  border-radius: 16px;
+  width: 250px;
+  height: 300px;
+  background-color: #dce2f0;
+  color: #50586c;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#confirm-add {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #50586c;
+  color: #dce2f0;
+  border: none;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+#confirm-add:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.read-book {
+  background-color: #33c848;
+  border: 1px solid #28ab34;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.read-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.notread-book {
+  background-color: #fd5754;
+  border: 1px solid #e14647;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.notread-book:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
